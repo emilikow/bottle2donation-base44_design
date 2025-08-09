@@ -4,7 +4,7 @@ const tabs = [
   ["home", "Home"],
   ["windows", "Collection Windows"],
   ["destinations", "Destinations"],
-  ["accepted", "Accepted Bottles"],
+  ["accepted", "TEST Accepted Bottles"],
   ["reference", "Bottle Reference"],
   ["impact", "My Impact"],
   ["leaderboard", "Leaderboard"],
@@ -20,7 +20,7 @@ export default function Nav({ active, setActive }) {
           <span className="ml-2 badge">Beta</span>
         </div>
 
-        {/* one-line, scrollable if needed */}
+        {/* one-line nav; scrolls horizontally if needed */}
         <nav className="ml-auto flex gap-1 whitespace-nowrap overflow-x-auto">
           {tabs.map(([key, label]) => {
             const isActive = active === key;
@@ -36,7 +36,6 @@ export default function Nav({ active, setActive }) {
                 }
               >
                 {label}
-                {/* thin underline when active */}
                 <span
                   className={
                     "pointer-events-none absolute left-3.5 right-3.5 -bottom-[6px] h-[2px] rounded-full transition-opacity " +
@@ -50,18 +49,4 @@ export default function Nav({ active, setActive }) {
       </div>
     </header>
   );
-}                {label}
-                <span
-                  className={
-                    'pointer-events-none absolute left-3.5 right-3.5 -bottom-[6px] h-[2px] rounded-full transition-opacity ' +
-                    (isActive ? 'bg-blue-600 opacity-100' : 'opacity-0')
-                  }
-                />
-              </button>
-            )
-          })}
-        </nav>
-      </div>
-    </header>
-  )
 }
