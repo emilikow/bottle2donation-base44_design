@@ -46,6 +46,7 @@
   }
   .btn-ghost { @apply bg-slate-50; }
 
+  /* 12-col layout helper; don't use ".grid" name (Tailwind utility collision) */
   .layout-grid { @apply grid grid-cols-12 gap-4; }
 
   .card {
